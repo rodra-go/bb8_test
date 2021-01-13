@@ -1,5 +1,5 @@
 import torch
-import time
+import datetime
 
 print('-----------------------------------------------------------------------')
 print('Datetime: {}'.format(datetime.datetime.now()))
