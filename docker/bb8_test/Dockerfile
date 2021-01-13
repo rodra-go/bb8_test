@@ -20,6 +20,7 @@ RUN echo "$USER:$PASS" | chpasswd
 ADD requirements.txt /var/$USER/
 ADD setup.py /var/$USER/
 RUN pip3 install --upgrade pip setuptools
+RUN pip3 install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip3 install -r /var/$USER/requirements.txt
 RUN python3 /var/$USER/setup.py
 
